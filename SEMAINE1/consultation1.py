@@ -13,9 +13,6 @@ def main():
         'z_mean': z_mean, 'z_std': z_std
     }
     save_normalization_params(norm_params, "norm_params.json")
-    print(f"x: mean={x_mean:.4f}, std={x_std:.4f}")
-    print(f"y: mean={y_mean:.4f}, std={y_std:.4f}")
-    print(f"z: mean={z_mean:.4f}, std={z_std:.4f}")
     plot_ground_truth(x, y, z, title="Terrain réel (Scatter 3D)", save_path="ground_truth_3d.png")
     np.savez('processed_data.npz', x_norm=x_norm, y_norm=y_norm, z_norm=z_norm)
 if __name__ == "__main__":
